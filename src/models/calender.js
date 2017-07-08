@@ -4,13 +4,11 @@
 
 /**
  * Created by dustar on 2017/7/8.
- */
+*/
 
 class Calender {
-    static currentId
     constructor(title, deadline, remindAhead = 20) {
         this.type = "Calender"
-        this.id = ++currentId
         this.title = title
         this.available = true
         this.createAt = new Date()
@@ -46,5 +44,7 @@ class Calender {
 }
 
 class CalendersQueue {
-    items = []
+    constructor() {
+        this.items = []
+    }
 }

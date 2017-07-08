@@ -11,7 +11,8 @@
         },
         "dependencies": {
             "lcd1602-pcf8574a-hd44780": "^0.2.7",
-            "button-gpio": "^2.0.2"
+            "button-gpio": "^2.0.0",
+            "ky-016": "^2.0.5"
         }
     }
 }

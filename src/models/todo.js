@@ -7,10 +7,8 @@
  */
 
 class Todo {
-    static currentId
     constructor(title) {
         this.type = "Todo"
-        this.id = ++currentId
         this.title = title
         this.available = true
         this.createAt = new Date()
@@ -37,10 +35,12 @@ class Todo {
 }
 
 class TodosQueue {
-    items = []
+    constructor() {
+        this.items = []
+    }
 
     count () {
-        return items.length
+        return this.items.length
     }
 
     switch () {
