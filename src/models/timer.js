@@ -11,16 +11,16 @@ class Timer {
         this.remindAt = this.createAt + interval * 60
     }
 
-    create() {
-
+    create(title, interval) {
+        //获取参数
+        timer = new Timer(title, interval)
+        this.refresh()
+        tag = "timer"
     }
 
     delete() {
-
-    }
-
-    remove() {
-
+        timer = null
+        this.refresh()
     }
 
     remind() {
@@ -30,14 +30,20 @@ class Timer {
     //
 
     stop() {
-
+        timer = null
     }
 
     delay() {
-
+        remindAt += 10 * 60
+        refresh()
     }
 
-    output() {
+    refresh() {
 
+    }
+    polling() {
+        let t = new Date()
+        if(t === remindAt)
+            this.reminder()
     }
 }

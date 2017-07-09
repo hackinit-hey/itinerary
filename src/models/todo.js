@@ -14,22 +14,33 @@ class Todo {
         this.createAt = new Date()
     }
 
-    create() {
-
+    static create() {
+        //获取参数并加入构造器
+        let todo = new Todo()
+        todos.items.add(todo)
     }
 
-    delete() {
-
+    static change() {
+        let temp = todos.items[0]
+        todos.items.split(0, 1)
+        todos.add(temp)
+        postToServer("todo", temp, todos.items.length + " TODO", "")
     }
+
+
 
     //
 
-    stop() {
-
-
+    static stop() {
+        todos.items.split(todos.items.length - 1, 1)
+        this.refresh()
     }
 
     output() {
+
+    }
+
+    refresh() {
 
     }
 }
@@ -45,5 +56,10 @@ class TodosQueue {
 
     switch () {
 
+    }
+
+    delete(pos) {
+        todos.items.split(pos, 1)
+        this.refresh()
     }
 }
