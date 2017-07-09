@@ -1,12 +1,15 @@
+
+
 $(document).ready(function() {
     setInterval(refresh, 1000)
-    $('#addTodo').on('click', ()=>{
-        "use strict";
-        $('#addTodo').attr('display','none')
-        $('#newTodoBlock').attr('display','block')
-    })
 })
 
 function refresh() {
+}
+
+function newTodo() {
+    "use strict";
+    let title = $('#newTodoName').val()
+    Todo.create(title)
 }
 

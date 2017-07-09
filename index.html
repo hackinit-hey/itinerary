@@ -72,7 +72,8 @@
         <p>
             Click plus icon to add a Todo thing
         </p>
-        <div id="addTodo"><img src="static/addTodo.png" class="addimg"/></div>
+        <div id="addTodo" onclick="$('#addTodo').css('display','none');
+        $('#newTodoBlock').css('display','block');$('#newTodoName').focus();"><img src="static/addTodo.png" class="addimg"/></div>
         <div id="newTodoBlock" style="display: none"><input id="newTodoName" type="text" placeholder="New Todo Event"></div>
     </div>
     <div class="col-md-2 bottom3">
@@ -90,7 +91,7 @@
     dropdown: true,
     scrollbar: true
 });">
-                <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
+                <input data-format="dd/MM/yyyy hh:mm:ss" type="text">
             </div>
         </div>
 
